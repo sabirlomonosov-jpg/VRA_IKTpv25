@@ -1,0 +1,146 @@
+table#lihtne{
+    border: 1px solid black;
+    width: 30%;
+    height: 100px;
+    text-align: center;
+}
+td{
+    border: 1px solid black;
+}
+table#keeruline1{
+    border: 1px solid red;
+    width: 10%;
+    height: 200px;
+    text-align: center;
+    border-collapse: collapse;
+}
+table#keeruline2{
+    border: 1px solid red;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    vertical-align: top;
+    border-collapse: collapse;
+}
+table#keeruline2 td{
+    vertical-align: top;
+    border: 1px solid red;
+    background-color: lightgray;
+}
+.nimia{
+    background-color: red;
+}
+
+#eesti{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 300px;
+    left: 40%;
+}
+
+#eesti tr:nth-child(1){
+    background-color: blue;
+}
+#eesti tr:nth-child(2){
+    background-color: black;
+}
+#eesti tr:nth-child(3){
+    background-color: white;
+}
+
+#taani{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 300px;
+    left: 60%;
+}
+#taani td{
+    border: 0 solid black;
+}
+
+#taani tr:nth-child(1) td:nth-child(1),
+#taani tr:nth-child(3) td:nth-child(1){
+    background-color: red;
+    height: 80px;
+    width: 65px;
+}
+
+#taani tr:nth-child(1) td:nth-child(3),
+#taani tr:nth-child(3) td:nth-child(3){
+    background-color: red;
+    width: 160px;
+}
+
+#taani tr:nth-child(1) td:nth-child(2),
+#taani tr:nth-child(3) td:nth-child(2){
+    background-color: white;
+    width: 45px;
+}
+
+#itaalia{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 550px;
+    left: 40%;
+}
+
+#itaalia tr:nth-child(1){
+    background-color: green;
+}
+
+#itaalia tr:nth-child(3){
+    background-color: red;
+}
+#itaalia td{
+    border: 0 solid black;
+}
+
+#benin{
+    width: 330px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 550px;
+    left: 60%;
+}
+
+#benin tr:nth-child(1){
+    background-color: green;
+}
+#benin tr:nth-child(1) td:nth-child(1){
+    width: 110px;
+}
+#benin tr:nth-child(2){
+    background-color: yellow;
+}
+#benin tr:nth-child(3){
+    background-color: red;
+}
+
+#benin td{
+    border: 0 solid black;
+}
+
+#sveti{
+    width: 210px;
+    height: 210px;
+    border: 1px solid lightgray;
+    border-spacing: 0;
+    position: absolute;
+    top: 425px;
+    left: 80%;
+}
+
+#sveti tr:nth-child(1){
+    background-color: red;
+}
