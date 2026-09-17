@@ -160,32 +160,3 @@ table#keeruline2 td{
 #sveti tr:nth-child(3) td:nth-child(1), tr:nth-child(3) td:nth-child(5){
     background-color: red;
 }
-
-
-* {
-    box-sizing: border-box;
-}
-
-body {
-    margin: 0;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: white;
-}
-
-#iseseisev {
-    width: 700px;
-    height: 500px;
-    border-collapse: collapse;
-    table-layout: fixed;
-}
-
-#iseseisev td {
-    border: 2px solid black;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
-}
