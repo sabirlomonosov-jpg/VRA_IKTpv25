@@ -161,39 +161,31 @@ table#keeruline2 td{
     background-color: red;
 }
 
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
 #iseseisev {
-    width: 500px;
-    height: 400px;
-    border: 1px solid lightgray;
-    border-spacing: 0;
-    position: absolute;
+    width: 700px;
+    height: 500px;
     border-collapse: collapse;
+    table-layout: fixed;
 }
 
 #iseseisev td {
-    border: 1px solid black;
+    border: 2px solid black;
     text-align: center;
-    font-weight: bold;
+    vertical-align: middle;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
 }
-
-/* Раскраска по номерам с помощью названий цветов */
-#iseseisev td:nth-of-type(1)  { background-color: lightpink; }
-#iseseisev td:nth-of-type(2)  { background-color: lightyellow; }
-#iseseisev td:nth-of-type(3)  { background-color: lightgreen; }
-#iseseisev td:nth-of-type(4)  { background-color: lightcyan; }
-#iseseisev td:nth-of-type(5)  { background-color: lightgray; }
-#iseseisev td:nth-of-type(6)  { background-color: lightblue; }
-#iseseisev td:nth-of-type(7)  { background-color: plum; }
-#iseseisev td:nth-of-type(8)  { background-color: honeydew; }
-#iseseisev td:nth-of-type(9)  { background-color: lavender; }
-#iseseisev td:nth-of-type(10) { background-color: mistyrose; }
-#iseseisev td:nth-of-type(11) { background-color: red; color: white; }
-#iseseisev td:nth-of-type(12) { background-color: mintcream; }
-#iseseisev td:nth-of-type(13) { background-color: orange; }
-#iseseisev td:nth-of-type(14) { background-color: gold; }
-#iseseisev td:nth-of-type(15) { background-color: ivory; }
-#iseseisev td:nth-of-type(16) { background-color: coral; }
-#iseseisev td:nth-of-type(17) { background-color: hotpink; color: white; }
-#iseseisev td:nth-of-type(18) { background-color: turquoise; }
-#iseseisev td:nth-of-type(19) { background-color: skyblue; }
-#iseseisev td:nth-of-type(20) { background-color: yellow; }
