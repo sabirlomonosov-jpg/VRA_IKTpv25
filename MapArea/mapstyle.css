@@ -1,62 +1,82 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: lightgoldenrodyellow;
     color: darkblue;
-    text-align: center;
-    margin: 20px;
+    padding: 10px 20px;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    height: calc(100vh - 100px);
+    align-items: flex-start;
+}
+
+.left-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.left-column img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border: 3px solid black;
+}
+
+.right-column {
+    flex: 1;
+    height: 100%;
+    overflow-y: auto;
 }
 
 h1 {
     color: darkred;
     text-decoration: underline;
+    margin: 5px 0;
+    font-size: 24px;
 }
 
 h2 {
     color: green;
+    margin: 5px 0 15px 0;
+    font-size: 16px;
 }
 
-img {
-    border: 3px solid black;
-    margin: 10px;
-}
-
-div {
-    background-color: white;
-    border: 2px solid blue;
-    padding: 10px;
-    margin: 15px auto;
-    width: 80%;
-}
-
-/* Блок с содержимым */
 .content-box {
     background-color: lightgray;
     border: 3px dashed red;
     padding: 15px;
-    width: 70%;
-    margin: 20px auto;
-    text-align: center;
+    text-align: left;
+    margin: 0;
 }
 
 .content-box h2 {
     color: purple;
 }
 
-/* Блок с характеристиками */
 .specs {
     background-color: white;
     border: 1px solid black;
     padding: 10px;
-    margin: 10px;
-    text-align: left;
-}
-
-.specs h3 {
-    color: darkblue;
+    margin: 10px 0;
 }
 
 .specs ul {
     list-style-type: square;
+    padding-left: 20px;
 }
 
 .description {
@@ -64,12 +84,11 @@ div {
     color: black;
 }
 
-/* Кнопка назад */
 .back-btn {
     display: inline-block;
     background-color: yellow;
     color: black;
-    padding: 10px 15px;
+    padding: 8px 12px;
     border: 2px solid black;
     text-decoration: none;
     font-weight: bold;
@@ -80,41 +99,51 @@ div {
     background-color: orange;
 }
 
-/* Галерея домов */
+.content-img {
+    max-width: 100%;
+    max-height: 180px;
+    display: block;
+    margin: 10px 0;
+    border: 2px solid blue;
+}
+
 .house-gallery {
-    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
 }
 
 .house-card {
     background-color: white;
     border: 2px solid green;
-    padding: 10px;
-    margin: 10px auto;
-    width: 80%;
-    text-align: left;
+    padding: 8px;
 }
 
 .house-card h3 {
     color: darkgreen;
-    margin-top: 0;
+    margin: 0 0 5px 0;
+    font-size: 14px;
 }
 
-.house-card .house-img, .house-img {
-    width: 200px;
+.house-card p {
+    margin: 0;
+    font-size: 12px;
+}
+
+.house-card .house-img {
+    width: 100px;
     border: 1px solid black;
+    float: left;
+    margin-right: 10px;
 }
 
-/* Матрица */
 .binary-code {
     font-family: 'Courier New', monospace;
-    font-size: 20px;
+    font-size: 18px;
     color: limegreen;
     background-color: black;
     padding: 10px;
     font-weight: bold;
-}
-
-.content-img {
-    width: 300px;
-    border: 2px solid blue;
+    word-break: break-all;
 }
