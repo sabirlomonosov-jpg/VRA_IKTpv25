@@ -6,6 +6,8 @@
     width: 600px;
     font-family: sans-serif;
     text-align: center;
+    border-collapse: collapse;
+    
 }
 
 #iseseisev td {
