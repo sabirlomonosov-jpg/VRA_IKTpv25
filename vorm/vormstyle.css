@@ -1,0 +1,77 @@
+form {
+    text-align: left;
+    background-color: #f0f0f0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    background-color: #ffffff;
+}
+
+td {
+    padding: 8px;
+    border: 1px solid #cccccc;
+}
+
+label {
+    font-weight: bold;
+    color: #333333;
+}
+
+input[type="text"] {
+    border: 1px solid #808080;
+    background-color: #fffae6;
+    padding: 5px;
+}
+
+input[type="email"] {
+    border: 1px solid #808080;
+    background-color: #e6f7ff;
+    padding: 5px;
+}
+
+input[type="tel"] {
+    border: 1px solid #808080;
+    background-color: #e6ffe6;
+    padding: 5px;
+}
+
+input[type="date"] {
+    border: 1px solid #808080;
+    background-color: #ffe6e6;
+    padding: 5px;
+}
+
+input[type="url"] {
+    border: 1px solid #808080;
+    background-color: #f3e6ff;
+    padding: 5px;
+}
+
+input[type="radio"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+input[type="range"] {
+    width: 150px;
+}
+
+input[type="file"] {
+    background-color: #eeeeee;
+    border: 1px solid #808080;
+}
+
+input[type="button"] {
+    background-color: #ff7f50;
+    color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px;
+    font-size: 16px;
+}
