@@ -1,44 +1,120 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f4f7f6;
-    color: #333;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: lightgoldenrodyellow;
+    color: darkblue;
     text-align: center;
+    margin: 20px;
 }
 
 h1 {
-    color: #2c3e50;
-    margin-bottom: 10px;
+    color: darkred;
+    text-decoration: underline;
 }
 
 h2 {
-    color: #7f8c8d;
-    font-size: 1.1rem;
-    font-weight: 400;
-    margin-bottom: 25px;
+    color: green;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px #00000026;
-    transition: transform 0.2s ease-in-out;
-}
-
-img:hover {
-    transform: scale(1.01);
+    border: 3px solid black;
+    margin: 10px;
 }
 
 div {
-    margin-top: 20px;
-    padding: 12px 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
+    background-color: white;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: 15px auto;
+    width: 80%;
+}
+
+/* Блок с содержимым */
+.content-box {
+    background-color: lightgray;
+    border: 3px dashed red;
+    padding: 15px;
+    width: 70%;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.content-box h2 {
+    color: purple;
+}
+
+/* Блок с характеристиками */
+.specs {
+    background-color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    text-align: left;
+}
+
+.specs h3 {
+    color: darkblue;
+}
+
+.specs ul {
+    list-style-type: square;
+}
+
+.description {
+    font-style: italic;
+    color: black;
+}
+
+/* Кнопка назад */
+.back-btn {
     display: inline-block;
-    box-shadow: 0 2px 6px #00000014;
-    color: #34495e;
-    font-weight: 500;
+    background-color: yellow;
+    color: black;
+    padding: 10px 15px;
+    border: 2px solid black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.back-btn:hover {
+    background-color: orange;
+}
+
+/* Галерея домов */
+.house-gallery {
+    margin: 15px 0;
+}
+
+.house-card {
+    background-color: white;
+    border: 2px solid green;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    text-align: left;
+}
+
+.house-card h3 {
+    color: darkgreen;
+    margin-top: 0;
+}
+
+.house-card .house-img, .house-img {
+    width: 200px;
+    border: 1px solid black;
+}
+
+/* Матрица */
+.binary-code {
+    font-family: 'Courier New', monospace;
+    font-size: 20px;
+    color: limegreen;
+    background-color: black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.content-img {
+    width: 300px;
+    border: 2px solid blue;
 }
