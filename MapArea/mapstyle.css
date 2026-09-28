@@ -1,149 +1,44 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    overflow: hidden;
-}
-
 body {
-    font-family: Arial, sans-serif;
-    background-color: lightgoldenrodyellow;
-    color: darkblue;
-    padding: 10px 20px;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
-    height: calc(100vh - 100px);
-    align-items: flex-start;
-}
-
-.left-column {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-}
-
-.left-column img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    border: 3px solid black;
-}
-
-.right-column {
-    flex: 1;
-    height: 100%;
-    overflow-y: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
 }
 
 h1 {
-    color: darkred;
-    text-decoration: underline;
-    margin: 5px 0;
-    font-size: 24px;
+    color: #2c3e50;
+    margin-bottom: 10px;
 }
 
 h2 {
-    color: green;
-    margin: 5px 0 15px 0;
-    font-size: 16px;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 25px;
 }
 
-.content-box {
-    background-color: lightgray;
-    border: 3px dashed red;
-    padding: 15px;
-    text-align: left;
-    margin: 0;
-}
-
-.content-box h2 {
-    color: purple;
-}
-
-.specs {
-    background-color: white;
-    border: 1px solid black;
-    padding: 10px;
-    margin: 10px 0;
-}
-
-.specs ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-.description {
-    font-style: italic;
-    color: black;
-}
-
-.back-btn {
-    display: inline-block;
-    background-color: yellow;
-    color: black;
-    padding: 8px 12px;
-    border: 2px solid black;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-.back-btn:hover {
-    background-color: orange;
-}
-
-.content-img {
+img {
     max-width: 100%;
-    max-height: 180px;
-    display: block;
-    margin: 10px 0;
-    border: 2px solid blue;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px #00000026;
+    transition: transform 0.2s ease-in-out;
 }
 
-.house-gallery {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 10px 0;
+img:hover {
+    transform: scale(1.01);
 }
 
-.house-card {
-    background-color: white;
-    border: 2px solid green;
-    padding: 8px;
-}
-
-.house-card h3 {
-    color: darkgreen;
-    margin: 0 0 5px 0;
-    font-size: 14px;
-}
-
-.house-card p {
-    margin: 0;
-    font-size: 12px;
-}
-
-.house-card .house-img {
-    width: 100px;
-    border: 1px solid black;
-    float: left;
-    margin-right: 10px;
-}
-
-.binary-code {
-    font-family: 'Courier New', monospace;
-    font-size: 18px;
-    color: limegreen;
-    background-color: black;
-    padding: 10px;
-    font-weight: bold;
-    word-break: break-all;
+div {
+    margin-top: 20px;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    display: inline-block;
+    box-shadow: 0 2px 6px #00000014;
+    color: #34495e;
+    font-weight: 500;
 }
