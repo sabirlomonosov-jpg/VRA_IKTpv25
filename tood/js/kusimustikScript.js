@@ -17,15 +17,19 @@ function radioValik(){
     let valik="";
     if(spotify.checked){
         valik = spotify.value;
+        pilt.src = "../images/spotify.png";
     }
     else if(radio.checked){
         valik = radio.value;
+        pilt.src = "../images/radio.png";
     }
     else if(youtube.checked){
         valik = youtube.value;
+        pilt.src= "../images/youtube.png";
     }
     else if(vinplat.checked){
         valik = vinplat.value;
+        pilt.src= "https://upload.wikimedia.org/wikipedia/commons/b/b6/12in-Vinyl-LP-Record-Angle.jpg?utm_source=et.wikipedia.org&utm_campaign=index&utm_content=original";
     }
     else{
         valik = "Palun, tee oma valik."
