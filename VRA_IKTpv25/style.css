@@ -1,0 +1,89 @@
+h1{
+    font-size: x-large;
+    font-family: "Comic Sans MS", cursive;
+    color: aqua; /* texti värv */
+}
+
+header h1{
+    padding: 5%;
+    background-color: honeydew; /* tausta värv */
+    font-variant: small-caps;
+    border-bottom: 8px dot-dot-dash lightblue;
+}
+
+header{
+    padding: 5%;
+    background-color: honeydew;
+    border-left: 3px solid lightcoral;
+    border-bottom: 3px dotted lightcoral;
+    border-radius: 0 0 0 60px;
+    background-image: url('test.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+footer {
+    padding: 5%;
+    background-color: honeydew; /* tausta värv */
+    font-variant: small-caps;
+    border-top: 8px double lightblue;
+}
+
+nav ul{
+    list-style-type: none;/*täpp võtab ära*/
+    margin: 0;
+    padding: 0;
+    background-color: #2c3e50;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+nav ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 5px 5px;
+    text-align: center;
+    border-left: 1px solid #e74c3c;
+    border-right: 1px solid #e74c3c;
+
+}
+
+nav ul li a:hover{
+    background-color: #3498db;
+
+}
+
+nav{
+    margin: 10px;
+}
+
+main{
+    margin-top: 5%;
+}
+
+section#pildigalerii,
+section#video,
+section#kaart,
+section#muusika {
+    border: none;
+}
+#pildigalerii img {
+    border: none;
+    padding: 0;
+    box-shadow: none;
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 0;
+}
+
+#suurkast {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+

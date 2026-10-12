@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" href="vormstyle.css">
+    <title>Muusika küsimustik</title>
+</head>
+<body>
+<h1>muusika küsimustik</h1>
+<div>HTML vormid ja nuppud</div>
+<form action="a">
+  <table border="1">
+    <tr>
+      <td>
+        <label for="nimi">Nimi: </label>
+      </td>
+      <td>
+        <input type="text" id="nimi" placeholder="Sabir">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="stiil">Muusikastiil: </label>
+      </td>
+      <td>
+        <select name="stiil" id="stiil">
+          <option value="vali">Vali..</option>
+          <option value="pop">Pop</option>
+          <option value="hiphop">Hiphop</option>
+          <option value="rap">Rap</option>
+          <option value="kantri">Kantri</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="raadio">
+          Kuidas sa kuulad muusikat?
+        </label>
+      </td>
+      <td>
+        <input type="radio" name="plaatvorm" id="raadio">
+        <label for="raadio">Raadio</label>
+        <br>
+        <input type="radio" name="plaatvorm" id="spotify">
+        <label for="spotify">Spotify</label>
+        <br>
+        <input type="radio" name="plaatvorm" id="youtube">
+        <label for="youtube">YouTube</label>
+        <br>
+        <input type="radio" name="plaatvorm" id="vinüülplaat">
+        <label for="vinüülplaat">Vinüülplaat</label>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <fieldset>
+          <legend>Tee oma valikud - lemmik ansambel</legend>
+          <input type="checkbox" name="lemmikud" id="rollingstones">
+          <label for="rollingstones">Rolling stones</label>
+          <br>
+          <input type="checkbox" name="lemmikud" id="balla">
+          <label for="balla">Balla</label>
+          <br>
+          <input type="checkbox" name="lemmikud" id="sabaton">
+          <label for="sabaton">Sabaton</label>
+          <br>
+          <input type="checkbox" name="lemmikud" id="hollyflame">
+          <label for="hollyflame">Holly flame</label>
+          <br>
+        </fieldset>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="tund">
+          Mitu tundi päevast sa kuulad muusikat?
+        </label>
+      </td>
+      <td>
+        0<input type="range" id="tund" min="0" max="24">24
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="email">Sisesta sinu email:</label>
+      </td>
+      <td>
+        <input type="email" id="email" placeholder="Nimi.Perenimi@gmail.com">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="telefon">Sisesta sine telifoni number:</label>
+      </td>
+      <td>
+        <input type="Tel" id="telefon" placeholder="+372 5846 2451">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="date">Millal sa kuulad muusika viimati:</label>
+      </td>
+      <td>
+        <input type="date" id="date">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="url">Sisesta sinu lemmik muusika URL lingi:</label>
+      </td>
+      <td>
+        <input type="url" id="url" placeholder="URL link">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="file">Sisesta muusika fail:</label>
+      </td>
+      <td>
+        <input type="file" id="file">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="button" id="button" value="Saada vastused" onclick="alert('Saadetud, tänan vastuse eest')">
+      </td>
+    </tr>
+  </table>
+
+</form>
+</body>
+</html>
