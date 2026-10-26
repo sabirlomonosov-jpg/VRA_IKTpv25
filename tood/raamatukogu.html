@@ -1,0 +1,153 @@
+<!doctype html><html lang="et"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Raamatu objekt ja raamatukogu</title><style>body{font:17px/1.65 Segoe UI,Arial,sans-serif;max-width:960px;margin:40px auto;padding:0 22px;color:#20313b;background:#f6f8fa}h1,h2{color:#164e63}h2{margin-top:36px}pre{background:#17232d;color:#edf4f8;padding:22px;border-radius:8px;overflow:auto;font:14px/1.6 Consolas,monospace}a{color:#075e80}img{max-width:100%;height:auto}small{color:#52636f}</style></head><body><h1>Raamatu objekt ja raamatukogu</h1><p>Sabir Lomonosov · M-IKTpv25_1 (TAR)</p><p>Kõik tulemused kuvatakse lehel ja brauseri konsoolis (F12 → Console).</p><h2>Tulemused</h2><pre id="tulemused" aria-live="polite"></pre><h2>Minu meetod</h2><p><code>otsiAutoriJargi(autor)</code> leiab kõik valitud autori raamatud. Kasutan <code>filter()</code>, sest samal autoril võib olla mitu raamatut.</p><p>Arvestan pärast 2000. aastat ilmunud väljaandeid. Aasta 2000 ei lähe arvesse. Kevade väljaande aasta muudan näites 2020-ks.</p><details><summary>JavaScripti kood</summary><pre>// Sama funktsioon kuvab teksti konsoolis ja HTML-lehel.
+function kuva(tekst) {
+  console.log(tekst);
+  if (typeof document !== &quot;undefined&quot;) {
+    document.getElementById(&quot;tulemused&quot;).textContent += tekst + &quot;\n&quot;;
+  }
+}
+
+const raamat = {
+  pealkiri: &quot;Kevade&quot;,
+  autor: &quot;Oskar Luts&quot;,
+  aasta: 1912,
+  kirjeldus() {
+    return this.pealkiri + &quot; – &quot; + this.autor + &quot; (&quot; + this.aasta + &quot;)&quot;;
+  },
+  muudaAasta(uusAasta) {
+    this.aasta = uusAasta;
+  }
+};
+
+kuva(&quot;RAAMAT&quot;);
+kuva(&quot;Enne muutmist: &quot; + raamat.kirjeldus());
+// Muudame näites väljaande aastat, mitte teose esmailmumise aastat.
+raamat.muudaAasta(2020);
+kuva(&quot;Pärast muutmist: &quot; + raamat.kirjeldus());
+
+const raamatukogu = {
+  raamatud: [
+    raamat,
+    { pealkiri: &quot;Rehepapp&quot;, autor: &quot;Andrus Kivirähk&quot;, aasta: 2000 },
+    { pealkiri: &quot;Mees, kes teadis ussisõnu&quot;, autor: &quot;Andrus Kivirähk&quot;, aasta: 2007 }
+  ],
+  kuvaRaamatud() {
+    this.raamatud.forEach((r, indeks) =&gt; {
+      kuva((indeks + 1) + &quot;. &quot; + r.pealkiri + &quot; – &quot; + r.autor + &quot; (&quot; + r.aasta + &quot;)&quot;);
+    });
+  },
+  lisaRaamat(uusRaamat) {
+    this.raamatud.push(uusRaamat);
+    kuva(&quot;Lisatud: &quot; + uusRaamat.pealkiri);
+  },
+  raamatuteArv() {
+    const arv = this.raamatud.length;
+    kuva(&quot;Raamatuid kokku: &quot; + arv);
+    return arv;
+  },
+  parast2000() {
+    const arv = this.raamatud.filter(r =&gt; r.aasta &gt; 2000).length;
+    kuva(&quot;Pärast 2000. aastat ilmunud raamatuid: &quot; + arv);
+    return arv;
+  },
+  // Minu meetod otsib kõik ühe autori raamatud.
+  otsiAutoriJargi(autor) {
+    const leitud = this.raamatud.filter(r =&gt; r.autor === autor);
+    kuva(&quot;Autor: &quot; + autor);
+    if (leitud.length === 0) kuva(&quot;Raamatuid ei leitud.&quot;);
+    leitud.forEach(r =&gt; kuva(r.pealkiri + &quot; (&quot; + r.aasta + &quot;)&quot;));
+    return leitud;
+  }
+};
+
+kuva(&quot;\nRAAMATUKOGU ENNE LISAMIST&quot;);
+raamatukogu.kuvaRaamatud();
+raamatukogu.raamatuteArv();
+kuva(&quot;\nUUE RAAMATU LISAMINE&quot;);
+raamatukogu.lisaRaamat({
+  pealkiri: &quot;Apteeker Melchior ja Oleviste mõistatus&quot;,
+  autor: &quot;Indrek Hargla&quot;,
+  aasta: 2010
+});
+kuva(&quot;\nRAAMATUKOGU PÄRAST LISAMIST&quot;);
+raamatukogu.kuvaRaamatud();
+raamatukogu.raamatuteArv();
+raamatukogu.parast2000();
+kuva(&quot;\nMINU MEETOD: OTSING AUTORI JÄRGI&quot;);
+raamatukogu.otsiAutoriJargi(&quot;Andrus Kivirähk&quot;);
+</pre></details><script>// Sama funktsioon kuvab teksti konsoolis ja HTML-lehel.
+function kuva(tekst) {
+  console.log(tekst);
+  if (typeof document !== "undefined") {
+    document.getElementById("tulemused").textContent += tekst + "\n";
+  }
+}
+
+const raamat = {
+  pealkiri: "Kevade",
+  autor: "Oskar Luts",
+  aasta: 1912,
+  kirjeldus() {
+    return this.pealkiri + " – " + this.autor + " (" + this.aasta + ")";
+  },
+  muudaAasta(uusAasta) {
+    this.aasta = uusAasta;
+  }
+};
+
+kuva("RAAMAT");
+kuva("Enne muutmist: " + raamat.kirjeldus());
+// Muudame näites väljaande aastat, mitte teose esmailmumise aastat.
+raamat.muudaAasta(2020);
+kuva("Pärast muutmist: " + raamat.kirjeldus());
+
+const raamatukogu = {
+  raamatud: [
+    raamat,
+    { pealkiri: "Rehepapp", autor: "Andrus Kivirähk", aasta: 2000 },
+    { pealkiri: "Mees, kes teadis ussisõnu", autor: "Andrus Kivirähk", aasta: 2007 }
+  ],
+  kuvaRaamatud() {
+    this.raamatud.forEach((r, indeks) => {
+      kuva((indeks + 1) + ". " + r.pealkiri + " – " + r.autor + " (" + r.aasta + ")");
+    });
+  },
+  lisaRaamat(uusRaamat) {
+    this.raamatud.push(uusRaamat);
+    kuva("Lisatud: " + uusRaamat.pealkiri);
+  },
+  raamatuteArv() {
+    const arv = this.raamatud.length;
+    kuva("Raamatuid kokku: " + arv);
+    return arv;
+  },
+  parast2000() {
+    const arv = this.raamatud.filter(r => r.aasta > 2000).length;
+    kuva("Pärast 2000. aastat ilmunud raamatuid: " + arv);
+    return arv;
+  },
+  // Minu meetod otsib kõik ühe autori raamatud.
+  otsiAutoriJargi(autor) {
+    const leitud = this.raamatud.filter(r => r.autor === autor);
+    kuva("Autor: " + autor);
+    if (leitud.length === 0) kuva("Raamatuid ei leitud.");
+    leitud.forEach(r => kuva(r.pealkiri + " (" + r.aasta + ")"));
+    return leitud;
+  }
+};
+
+kuva("\nRAAMATUKOGU ENNE LISAMIST");
+raamatukogu.kuvaRaamatud();
+raamatukogu.raamatuteArv();
+kuva("\nUUE RAAMATU LISAMINE");
+raamatukogu.lisaRaamat({
+  pealkiri: "Apteeker Melchior ja Oleviste mõistatus",
+  autor: "Indrek Hargla",
+  aasta: 2010
+});
+kuva("\nRAAMATUKOGU PÄRAST LISAMIST");
+raamatukogu.kuvaRaamatud();
+raamatukogu.raamatuteArv();
+raamatukogu.parast2000();
+kuva("\nMINU MEETOD: OTSING AUTORI JÄRGI");
+raamatukogu.otsiAutoriJargi("Andrus Kivirähk");
+</script></body></html>
