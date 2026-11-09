@@ -1,0 +1,13 @@
+
+canvas#canvas {
+    background-color: lightgreen;
+    border: 1px solid lemonchiffon;
+    border-radius: 5px;
+    width: 400pt;
+    height: 400pt;
+}
+table{
+    position : absolute;
+    left : 565px;
+    top : 50px;
+}
