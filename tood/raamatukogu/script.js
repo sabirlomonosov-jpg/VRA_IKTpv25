@@ -8,11 +8,11 @@ let raamat = {
     autor: "Oskar Luts",
     aasta: 1912,
 
-    kuvaKirjeldus: function () {
+    kuvaKirjeldus() {
         kuva(this.pealkiri + " - " + this.autor + " (" + this.aasta + ")");
     },
 
-    muudaAasta: function (uusAasta) {
+    muudaAasta(uusAasta) {
         this.aasta = uusAasta;
     }
 };
@@ -32,23 +32,23 @@ let raamatukogu = {
         { pealkiri: "Mees, kes teadis ussisõnu", autor: "Andrus Kivirähk", aasta: 2007 }
     ],
 
-    kuvaRaamatud: function () {
+    kuvaRaamatud() {
         for (let i = 0; i < this.raamatud.length; i++) {
             let yksRaamat = this.raamatud[i];
             kuva((i + 1) + ". " + yksRaamat.pealkiri + " - " + yksRaamat.autor + " (" + yksRaamat.aasta + ")");
         }
     },
 
-    lisaRaamat: function (uusRaamat) {
+    lisaRaamat(uusRaamat) {
         this.raamatud.push(uusRaamat);
         kuva("Lisatud: " + uusRaamat.pealkiri);
     },
 
-    kuvaRaamatuteArv: function () {
+    kuvaRaamatuteArv() {
         kuva("Raamatuid kokku: " + this.raamatud.length);
     },
 
-    loeParast2000: function () {
+    loeParast2000() {
         let arv = 0;
         for (let i = 0; i < this.raamatud.length; i++) {
             if (this.raamatud[i].aasta > 2000) {
@@ -59,7 +59,7 @@ let raamatukogu = {
     },
 
     // Minu meetod kuvab kõik ühe autori raamatud.
-    otsiAutoriJargi: function (autor) {
+    otsiAutoriJargi(autor) {
         let leitud = 0;
         kuva("Autor: " + autor);
         for (let i = 0; i < this.raamatud.length; i++) {
