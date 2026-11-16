@@ -2,19 +2,94 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-    <!--veebilehe tehniline info-->
+    <!-- veebilehe tehniline info -->
     <meta charset="UTF-8">
     <title>Sabir veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.min.js"></script>
 </head>
+
 <body>
-<!--veebilehe sisu-->
+
+<script>
+    $(document).ready(function() {
+
+        $('#kuva').hide();
+
+        // Peida nupp
+        $('#peida').click(function() {
+            $('#sisu').hide(500);
+            $(this).hide();
+            $('#kuva').show();
+        });
+
+        // Kuva nupp
+        $('#kuva').click(function() {
+            $('#sisu').show(500);
+            $(this).hide();
+            $('#peida').show();
+        });
+
+        // Liiguta paremale
+        $('#paremale').click(function() {
+            $('#sisu, h2').animate({left: '500px'}, 1000);
+            $(this).hide();
+            $('#vasakule').show();
+        });
+
+        // Liiguta vasakule
+        $('#vasakule').click(function() {
+            $('#sisu, h2').animate({left: '0px'}, 1000);
+            $(this).hide();
+            $('#paremale').show();
+        });
+
+        // Näita ja peida lisainfo
+        $('#lisainfo').click(function() {
+            $('#selgitus div').slideToggle(500);
+        });
+
+        // Muuda pildi läbipaistvust
+        $('#labi').click(function() {
+            $('#pilt').fadeTo(500, 0.3);
+        });
+
+        // Taasta pildi läbipaistvus
+        $('#taasta').click(function() {
+            $('#pilt').fadeTo(500, 1);
+        });
+
+        function start() {
+            $('#sisu').draggable();
+            $('#pilt').draggable();
+
+            $('#sisu').bind('drag', xyKoordinat);
+            $('#pilt').bind('drag', xyKoordinat);
+        }
+
+        function xyKoordinat(event, ui) {
+            let koht = ui.offset;
+
+            $('#vastus').html(
+                'x:' + Math.round(koht.left) +
+                ' //// y:' + Math.round(koht.top)
+            );
+        }
+
+        start();
+    });
+</script>
+
+<!-- veebilehe sisu -->
+
 <!-- päis -->
 <header>
     <h1>Sabir veebirakenduste aluste tööd</h1>
 </header>
 
-<!--nav menuu-->
+<!-- nav menuu -->
 <nav>
     <ul>
         <li>
@@ -32,30 +107,67 @@
         <li>
             <a href="meedia.html">Meedia</a>
         </li>
-
     </ul>
 </nav>
-<!--põhisisu-->
+
+<!-- põhisisu -->
 <main>
+
     <section>
-        <h2>
-            Tere tulemast!
-        </h2>
-        <p>
-            See on index leht mis on tehtus 1.veebirakenduste tunnis!
-            Palun vajuta teiste lingi peale ning kontrolli et sisu on täiendud!
-        </p>
-    </section>
-    <section>
-        <h2>Põnev pilt</h2>
-        <div>
-            <img src="test.png" alt="See on ise tehtud pildi">
+        <h2>Tere tulemast!</h2>
+
+        <input type="button" value="--->" id="paremale">
+
+        <input type="button" value="<---" id="vasakule"
+               style="display:none">
+
+        <input type="button" value="Peida" id="peida">
+
+        <input type="button" value="Kuva" id="kuva">
+
+        <div id="sisu">
+            <p>
+                See on index leht mis on tehtus 1.veebirakenduste tunnis!
+                Palun vajuta teiste lingi peale ning kontrolli et sisu on täiendud!
+            </p>
         </div>
     </section>
+
+    <section>
+        <h2>Põnev pilt</h2>
+
+        <div>
+            <img id="pilt" src="test.png" alt="See on ise tehtud pildi">
+        </div>
+
+        <div id="vastus"></div>
+
+        <input type="button" value="Muuda läbipaistvust" id="labi">
+
+        <input type="button" value="Taasta pilt" id="taasta">
+    </section>
+
+    <section id="selgitus">
+
+        <input type="button" value="Näita / Peida lisainfo" id="lisainfo">
+
+        <div>
+            <p>Draggable pilt</p>
+            <p>Kuva pildi koordinaadid</p>
+            <p>Left ja right nupud</p>
+            <p>Kuva ja peida tekst</p>
+            <p>Liiguta tekst</p>
+            <p>Muuda pildi läbipaistvust</p>
+        </div>
+
+    </section>
+
 </main>
-<!--jalus-->
+
+<!-- jalus -->
 <footer>
     Sabir leht &copy; 2026
 </footer>
+
 </body>
 </html>
