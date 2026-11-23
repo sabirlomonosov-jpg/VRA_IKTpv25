@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Sabir veebirakenduste aluste tööd</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 </head>
 <body>
 <!--veebilehe sisu-->
@@ -17,20 +18,25 @@
 <!--navigeerimismenüü-->
 <nav>
     <ul>
-        <li>
-            <a href="index.html">Kodu</a>
+        <li><a href="index.html">Kodu</a></li>
+        <li><a href="tutvustus.html">Tutvustus</a></li>
+        <li><a href="lingid.html">Kasulikud lingid</a></li>
+        <li class="alamenyy">
+            <a href="tehtud.html">Tehtud tööd</a>
+            <ul>
+                <li><a href="vorm/tabelid.html">Tabelid</a></li>
+                <li><a href="vorm/paberiUlesanne.html">Paberi ülesanne</a></li>
+                <li><a href="vorm/iseiesisevtabel.html">Iseseisev tabel</a></li>
+            </ul>
         </li>
-        <li>
-            <a href="tutvustus.html">Tutvustus</a>
-        </li>
-        <li>
-            <a href="lingid.html">Kasulikud lingid</a>
-        </li>
-        <li>
-            <a href="tood.html">Tehtud tööd</a>
-        </li>
+        <li><a href="meedia.html">Meedia</a></li>
     </ul>
 </nav>
+<!-- Breadcrumb -->
+<div>
+    <a href="index.html">Avaleht</a> &gt;
+    <a href="tehtud.html">Tehtud tööd</a>
+</div>
 <!--põhisisu-->
 <main>
     <section id="kast6">

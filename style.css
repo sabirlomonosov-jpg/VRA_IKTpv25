@@ -90,3 +90,34 @@ section#muusika {
     position: relative;
     left: 0px;
 }
+
+/* Tehtud tööd - alati avatud alamenüü */
+nav ul li.alamenyy {
+    position: relative;
+}
+
+nav ul li.alamenyy > ul {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 180px;
+    background-color: #2c3e50;
+    z-index: 10;
+}
+
+nav ul li.alamenyy > ul li {
+    display: block;
+}
+
+nav ul li.alamenyy > ul li a {
+    text-align: left;
+    border-bottom: 1px solid #e74c3c;
+}
+
+/* Jätab avatud alamenüüle ruumi enne Breadcrumb-riba */
+nav {
+    margin-bottom: 105px;
+}
