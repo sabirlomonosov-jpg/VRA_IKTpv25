@@ -121,3 +121,24 @@ nav ul li.alamenyy > ul li a {
 nav {
     margin-bottom: 105px;
 }
+
+#tere {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 800px;
+    margin: 10px;
+}
+
+#piltSection {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 250px;
+    margin: 10px;
+}
+
+#selgitus {
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 250px;
+    margin: 10px;
+}

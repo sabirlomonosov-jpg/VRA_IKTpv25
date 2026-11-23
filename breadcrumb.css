@@ -1,0 +1,48 @@
+/* Breadcrumb ehk jäljerida: Metsheina konspekti klassid */
+.li_kujundus{
+    background-image:url(img/separator-arrow.gif);
+    background-repeat:no-repeat;
+    background-position:left;
+    padding-left:15px;
+    display:inline;
+}
+.ul_kujundus{
+    list-style:none;
+    margin:0;
+    padding:0;
+    display:inline;
+}
+
+/* Menüüriba värvid sobivad olemasoleva veebilehe stiiliga. */
+nav.jaljerida{
+    background-color:#2c3e50;
+    padding:12px 15px;
+    margin:10px 0;
+    border-radius:6px;
+    color:white;
+    font-family:Arial, sans-serif;
+    line-height:2;
+}
+nav.jaljerida ul{
+    background-color:transparent;
+    text-align:left;
+}
+nav.jaljerida li{
+    display:inline;
+}
+nav.jaljerida a,
+nav.jaljerida span{
+    display:inline;
+    color:white;
+    border:0;
+    padding:5px 4px;
+    text-decoration:none;
+}
+nav.jaljerida a:hover{
+    background-color:#3498db;
+    border-radius:4px;
+}
+nav.jaljerida span[aria-current="page"]{
+    color:#aee8f2;
+    font-weight:bold;
+}
